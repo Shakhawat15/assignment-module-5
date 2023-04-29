@@ -25,7 +25,6 @@ const server = http.createServer((req, res) => {
                 res.end(); // End the response
             }
         })
-        // if we give unknown url then read the 404.html file
     } else if (req.url === '/about') {
         // Read the file Asynchronously
         fs.readFile('./public/about.html', (error, data) => {
@@ -43,6 +42,7 @@ const server = http.createServer((req, res) => {
             }
         })
     } else if (req.url === "/style.css") {
+        // Read the file Asynchronously
         fs.readFile('./public/style.css', (error, data) => {
             // Check the file exist or not
             if (error) {
@@ -58,6 +58,7 @@ const server = http.createServer((req, res) => {
             }
         })
     } else {
+        // if we give unknown url then read the 404.html file
         // Read the file Asynchronously
         fs.readFile('./public/404.html', (error, data) => {
             // Check the file exist or not

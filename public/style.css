@@ -3,6 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+nav {
+    padding: 20px;
+    background: #7FFFD4FF;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -10,10 +33,12 @@
     height: 100vh;
     flex-direction: column;
 }
+
 h1 {
     font-size: 50px;
     font-weight: 900;
 }
+
 h2 {
     font-size: 30px;
     font-weight: 900;
