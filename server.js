@@ -15,8 +15,8 @@ const server = http.createServer((req, res) => {
             // Check the file exist or not
             if (error) {
                 // if error then show the message that the file is not found
-                res.writeHead(404, {'Content-Type': 'text/plain'}); // Sent the status code 404
-                res.write('404 File Not Found'); // Write the message that we want to show
+                res.writeHead(404, {'Content-Type': 'text/html'}); // Sent the status code 404
+                res.write('<h1 style="text-align:center;">404, the File Not Found in the public directory</h1>'); // Write the message that we want to show
                 res.end(); // End the response
             } else {
                 // if the file exist then write the file
@@ -31,8 +31,24 @@ const server = http.createServer((req, res) => {
             // Check the file exist or not
             if (error) {
                 // if error then show the message that the file is not found
-                res.writeHead(404, {'Content-Type': 'text/plain'}); // Sent the status code 404
-                res.write('404 File Not Found'); // Write the message that we want to show
+                res.writeHead(404, {'Content-Type': 'text/html'}); // Sent the status code 404
+                res.write('<h1 style="text-align:center;">404, the File Not Found in the public directory</h1>'); // Write the message that we want to show
+                res.end(); // End the response
+            } else {
+                // if the file exist then write the file
+                res.writeHead(200, {'Content-Type': 'text/html'}); // Sent the status code 200
+                res.write(data); // Write the data
+                res.end(); // End the response
+            }
+        })
+    }else if (req.url === '/not-exist') {
+        // Read the file Asynchronously
+        fs.readFile('./public/hello.html', (error, data) => {
+            // Check the file exist or not
+            if (error) {
+                // if error then show the message that the file is not found
+                res.writeHead(404, {'Content-Type': 'text/html'}); // Sent the status code 404
+                res.write('<h1 style="text-align:center;">404, the File Not Found in the public directory</h1>'); // Write the message that we want to show
                 res.end(); // End the response
             } else {
                 // if the file exist then write the file
@@ -47,8 +63,8 @@ const server = http.createServer((req, res) => {
             // Check the file exist or not
             if (error) {
                 // if error then show the message that the file is not found
-                res.writeHead(404, {'Content-Type': 'text/plain'}); // Sent the status code 404
-                res.write('404 File Not Found'); // Write the message that we want to show
+                res.writeHead(404, {'Content-Type': 'text/html'}); // Sent the status code 404
+                res.write('<h1 style="text-align:center;">404, the File Not Found in the public directory</h1>'); // Write the message that we want to show
                 res.end(); // End the response
             } else {
                 // if the file exist then write the file
@@ -64,8 +80,8 @@ const server = http.createServer((req, res) => {
             // Check the file exist or not
             if (error) {
                 // if error then show the message that the file is not found
-                res.writeHead(404, {'Content-Type': 'text/plain'}); // Sent the status code 404
-                res.write('404 File Not Found'); // Write the message that we want to show
+                res.writeHead(404, {'Content-Type': 'text/html'}); // Sent the status code 404
+                res.write('<h1 style="text-align:center;">404, the File Not Found in the public directory</h1>'); // Write the message that we want to show
                 res.end(); // End the response
             } else {
                 // if the file exist then write the file
